@@ -211,7 +211,7 @@ maybe_quiet $TIMEOUT ../mrworker ../../mrapps/jobcount.so &
 maybe_quiet $TIMEOUT ../mrworker ../../mrapps/jobcount.so
 
 NT=`cat mr-out* | awk '{print $2}'`
-if [ "$NT" -eq "8" ]
+if [ "$NT" == "8" ]
 then
   echo '---' job count test: PASS
 else
